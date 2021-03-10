@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Médiathèque</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper grey darken-4">
+      <a href="" class="brand-logo center"><i class="material-icons">library_books</i>Liste de films</a>
+    </div>
+  </nav>
+  <br>
+  <header class="container">
+  </header>
+  <main class="container">
+    <div>
+    <button class="waves-effect waves-light btn blue darken-1 z-depth-3" type="send" id="ajouter"><i
+        class="material-icons right">add</i>Ajouter un film</button>
+    </div>
+    <div id="formulaire" width=100% class="col s9">
+      <form action="" class="">
+        <div class="input-field col s3"><i class="material-icons prefix">local_movies</i>
+          <label class="active" for="Titre">Entrer un titre</label>
+          <input placeholder="" id="Titre" type="text">
+          <span class="helper-text" for="Titre" data-error="Minimum 2 caractères" data-success="Saisie valide"></span>
+        </div>
+        <div class="input-field col s3"><i class="material-icons prefix">date_range</i>
+          <label class="active" for="Année">Entrer une année</label>
+          <input placeholder="" id="Année" type="number">
+          <span class="helper-text" for="Année"
+            data-error="Format de l'année 4 chiffres compris entre 1900 et l'année en cours"
+            data-success="Saisie valide"></span>
+
+        </div>
+        <div class="input-field col s3"><i class="material-icons prefix">videocam</i>
+          <label class="active" for="Réalisateur">Entrer un réalisateur</label>
+          <input placeholder="" id="Réalisateur" type="text">
+          <span class="helper-text" for="Réalisateur" data-error="Minimum 5 caractères"
+            data-success="Saisie valide"></span>
+        </div>
+      </form>
+      <button id="enregistrer" value="" class="waves-effect waves-light btn col s3 blue darken-1 z-depth-3"><i
+          class="material-icons right">cloud</i>Enregistrer</button>
+      <button id="retour" value="" class="waves-effect waves-light btn red darken-2 col s3 z-depth-3"><i
+          class="material-icons right">reply</i>Annuler</button>
+    </div>
+    <br>
+    <div class="input-field col s4">
+      <select id="choix">
+        <option value="" disabled selected>Choisir une option de tri</option>
+        <option value="année">Année</option>
+        <option value="titre">Titre</option>
+      </select>
+      <label>TRIER PAR : </label>
+    </div>
+
+    <article class="">
+      <table class="striped" width=80%>
+        <thead>
+          <tr>
+            <th width=25%>Titre</th>
+            <th width=25%>Année</th>
+            <th width=25%>Réalisateur</th>
+            <th width=25%>Action</th>
+          </tr>
+        </thead>
+        <tbody id="Tableau">
+
+        </tbody>
+      </table>
+    </article>
+
+  </main>
+  <br>
+  <footer class="page-footer grey darken-4">
+
+    <div class="footer-copyright grey darken-4">
+      <div class="container">© 2021 Ivan BOUGAEFF Tous Droits Réservés
+        <div class="right" href="#!">ECF AFPA</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+    crossorigin="anonymous"></script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
